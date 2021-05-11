@@ -4,6 +4,8 @@ const todos = [
   { id: 3, content: "js", complete: false },
 ];
 
+console.log(window);
+
 const $navList = document.querySelector(".nav--list");
 
 $navList &&
