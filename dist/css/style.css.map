@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://js-ts-practice/./src/sass/main.scss"],"names":[],"mappings":"AAAA;EACE;AACF,C","file":"css/style.css","sourcesContent":["li {\n  color: red;\n}\n"],"sourceRoot":""}

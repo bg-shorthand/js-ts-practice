@@ -15,13 +15,18 @@ module.exports = {
   ],
   module: {
     rules: [
+      // {
+      //   test: /\.tsx?$/,
+      //   use: "ts-loader",
+      //   exclude: /node_modules/,
+      // },
       {
-        test: /\.js$/,
+        test: /\.js?$/,
         include: [path.resolve(__dirname, "src/js")],
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: ["@babel/preset-env", "@babel/preset-typescript"],
             plugins: ["@babel/plugin-proposal-class-properties"],
           },
         },
@@ -34,6 +39,9 @@ module.exports = {
       },
     ],
   },
+  // resolve: {
+  //   extensions: [".tsx", ".ts", ".js"],
+  // },
   devtool: "source-map",
   // https://webpack.js.org/concepts/mode/#mode-development
   mode: "development",

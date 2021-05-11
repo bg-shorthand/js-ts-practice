@@ -6,10 +6,11 @@ const todos = [
 
 const $navList = document.querySelector(".nav--list");
 
-$navList.innerHTML = todos
-  .map((todo) => {
-    return `
+$navList &&
+  ($navList.innerHTML = todos
+    .map((todo) => {
+      return `
   <li>${todo.content}</li>
   `;
-  })
-  .join("");
+    })
+    .join(""));
