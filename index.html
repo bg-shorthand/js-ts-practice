@@ -9,11 +9,21 @@
   </head>
   <body>
     <h1>JS TS PRACTICE</h1>
-    <nav class="nav">
-      <ul class="nav--list">
-        <li><a href="#">1. example</a></li>
+    <section class="todos">
+      <h2 class="todos--heading">TODOS</h2>
+      <input type="text" class="todos--input" id="todosInput"><label for="todosInput">Type your todo</label>
+      <ul class="todos--state">
+        <li><button>All</button></li>
+        <li><button>Active</button></li>
+        <li><button>Completed</button></li>
       </ul>
-    </nav>
+      <ul class="todos--todo">
+
+      </ul>
+      <input type="checkbox" class="todos--all-check" id="todosAllCheck"><label for="todosAllCheck">All</label>
+      <span>active</span><span>0</span><span>all</span><span>3</span>
+    </section>
+    <nnav>
     <script src="/dist/js/bundle.js"></script>
   </body>
 </html>
