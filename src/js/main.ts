@@ -1,18 +1,30 @@
-const todos = [
-  { id: 1, content: "html", complete: false },
-  { id: 2, content: "css", complete: true },
-  { id: 3, content: "js", complete: false },
-];
+type Todo = { id: number; content: string; completed: boolean };
 
-console.log(window);
+let todos: Todo[] = [];
 
-const $navList = document.querySelector(".nav--list");
+const $todosTodo = document.querySelector(".todos--todo");
 
-$navList &&
-  ($navList.innerHTML = todos
-    .map((todo) => {
-      return `
-  <li>${todo.content}</li>
-  `;
-    })
-    .join(""));
+const todosRender = () => {
+  $todosTodo &&
+    ($todosTodo.innerHTML = todos
+      .map((todo) => {
+        return `
+        <li id=${todo.id}>
+          <input type="checkbox" ${todo.completed ? "checked" : ""}>
+          <span>${todo.content}</span>
+          <button>DEL</button>
+        </li>
+      `;
+      })
+      .join(""));
+};
+
+const getTodos = async () => {
+  const json = await fetch("http://localhost:3000/todos");
+  return json;
+};
+
+document.addEventListener("DOMContentLoaded", async () => {
+  todos = await (await getTodos()).json();
+  todosRender();
+});

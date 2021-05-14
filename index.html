@@ -10,18 +10,26 @@
   <body>
     <h1>JS TS PRACTICE</h1>
     <section class="todos">
-      <h2 class="todos--heading">TODOS</h2>
-      <input type="text" class="todos--input" id="todosInput"><label for="todosInput">Type your todo</label>
-      <ul class="todos--state">
-        <li><button>All</button></li>
-        <li><button>Active</button></li>
-        <li><button>Completed</button></li>
-      </ul>
-      <ul class="todos--todo">
-
-      </ul>
-      <input type="checkbox" class="todos--all-check" id="todosAllCheck"><label for="todosAllCheck">All</label>
-      <span>active</span><span>0</span><span>all</span><span>3</span>
+      <header>
+        <h2 class="todos--heading">TODOS</h2>
+        <input type="text" class="todos--input" id="todosInput" placeholder="Type your todo"><label for="todosInput" class="a11y-hidden">Type your todo</label>
+        <ul class="todos--state">
+          <li><button>All</button></li>
+          <li><button>Active</button></li>
+          <li><button>Completed</button></li>
+        </ul>
+      </header>
+      <main>
+        <ul class="todos--todo">
+  
+        </ul>
+      </main>
+      <footer>
+        <label for="todosAllCheck"><input type="checkbox" class="todos--all-check" id="todosAllCheck">All</label>
+        <div class="todos--status">
+          <span title="Completed Todos">0</span><span> / </span><span title="All Todos">3</span>
+        </div>
+      </footer>
     </section>
     <nnav>
     <script src="/dist/js/bundle.js"></script>

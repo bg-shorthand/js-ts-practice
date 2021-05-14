@@ -1,3 +1,67 @@
+body,
+body > * {
+  box-sizing: border-box;
+}
+
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: circle(0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+ul,
 li {
-  color: red;
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.todos {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+
+  &--state {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &--input {
+    width: 100%;
+  }
+
+  &--todo {
+    padding: 10px 0;
+    margin: 10px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  &--todo > li {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  & footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
